@@ -1,14 +1,9 @@
 # mixer for the flightfuture tilt mechansim servo, elevons and aileron
 =======================================================================
 
-Right tilt mechanism servo mixer
----------------------------
+tilt mechanism servo mixer
 M: 1
-S: 1 4    10000 10000  0  -10000  10000
-
-Left tilt mechanism servo mixer
-M: 1
-S: 1 4    10000 10000  0  -10000  10000
+S: 1 4    0 20000  -10000  -10000  10000
 
 
 Elevon mixers

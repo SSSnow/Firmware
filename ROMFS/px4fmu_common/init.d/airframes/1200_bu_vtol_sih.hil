@@ -77,4 +77,4 @@ set MIXER bu_vtol
 set MIXER_AUX bu_vtol
 
 set PWM_OUT 12345678
-set PWM_AUX_OUT 12345
+set PWM_AUX_OUT 1234

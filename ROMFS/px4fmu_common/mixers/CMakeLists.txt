@@ -87,4 +87,6 @@ px4_add_romfs_files(
 	zmr250.main.mix
 	flightfuture.aux.mix
 	flightfuture.main.mix
+	bu_vtol.aux.mix
+	bu_vtol.main.mix
 )

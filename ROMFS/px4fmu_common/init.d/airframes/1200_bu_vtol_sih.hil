@@ -73,8 +73,8 @@ param set SYS_HITL 2
 set MAV_TYPE 21
 
 #set mixer
-set MIXER bu01_vtol
-set MIXER_AUX bu01_vtol
+set MIXER bu_vtol
+set MIXER_AUX bu_vtol
 
 set PWM_OUT 12345678
 set PWM_AUX_OUT 12345

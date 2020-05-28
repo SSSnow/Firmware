@@ -257,6 +257,8 @@ void Sih::read_motors()
 void Sih::generate_force_and_torques()
 {
 	_T_B = Vector3f(0.0f, 0.0f, -_T_MAX * (+_u[0] + _u[1] + _u[2] + _u[3]));
+	//cal the total thrust
+
 	_Mt_B = Vector3f(_L_ROLL * _T_MAX * (-_u[0] + _u[1] + _u[2] - _u[3]),
 			 _L_PITCH * _T_MAX * (+_u[0] - _u[1] + _u[2] - _u[3]),
 			 _Q_MAX * (+_u[0] + _u[1] - _u[2] - _u[3]));
@@ -264,6 +266,23 @@ void Sih::generate_force_and_torques()
 	_Fa_I = -_KDV * _v_I;   // first order drag to slow down the aircraft
 	_Ma_B = -_KDW * _w_B;   // first order angular damper
 }
+
+// float Sih::P_thrust_curve(float u)
+// {
+
+// }
+
+// float Sih::fst(x, a, b)
+// {
+// 	if(x > b)
+// 	{
+// 		return 1;
+// 	}else if(x < a){
+// 		return 0;
+// 	}else{
+// 		return ((x-a)/(b-a));
+// 	}
+// }
 
 // apply the equations of motion of a rigid body and integrate one step
 void Sih::equations_of_motion()

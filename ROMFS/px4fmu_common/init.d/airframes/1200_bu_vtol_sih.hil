@@ -1,11 +1,11 @@
 #!/bin/sh
 #
-# @name SIH Quadcopter X
+# @name SIH BU01 VTOL
 #
 # @type Simulation
-# @class Copter
+# @class VTOL
 #
-# @maintainer Romain Chiappinelli <romain.chiap@gmail.com>
+# @maintainer snowpang <18516614106@163.com>
 #
 
 sh /etc/init.d/rc.vtol_defaults

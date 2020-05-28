@@ -164,6 +164,8 @@ SimpleMixer::from_text(Mixer::ControlCallback control_cb, uintptr_t cb_handle, c
 		debug("simple parse failed on '%s'", buf);
 		goto out;
 	}
+	printf(buf);
+	printf("simpleMixer text inputs:%i\n",inputs);
 
 	/* at least 1 input is required */
 	if (inputs == 0) {
@@ -270,6 +272,7 @@ SimpleMixer::groups_required(uint32_t &groups)
 {
 	for (unsigned i = 0; i < _pinfo->control_count; i++) {
 		groups |= 1 << _pinfo->controls[i].control_group;
+		// printf("SimpleMixer control_count:%i, groups:%i\n",_pinfo->control_count,_pinfo->controls[i].control_group);
 	}
 }
 

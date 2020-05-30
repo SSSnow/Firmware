@@ -157,7 +157,6 @@ load(const char *devname, const char *fname, bool append)
 		PX4_ERR("can't load mixer file: %s", fname);
 		return 1;
 	}
-	printf(buf);
 
 	/* Pass the buffer to the device */
 	int ret = px4_ioctl(dev, MIXERIOCLOADBUF, (unsigned long)buf);

@@ -346,11 +346,6 @@ bool MixingOutput::update()
 			if (_control_subs[i].copy(&_controls[i])) {
 				n_updates++;
 			}
-			// PX4_INFO("n_updates:%i, _groups_subscribed %i", n_updates, _groups_subscribed);
-			// PX4_INFO("actuator[%i] output0: %f", i, (double)_controls[i].control[actuator_controls_s::INDEX_ROLL]);
-			// PX4_INFO("actuator[%i] output1: %f", i, (double)_controls[i].control[actuator_controls_s::INDEX_PITCH]);
-			// PX4_INFO("actuator[%i] output2: %f", i, (double)_controls[i].control[actuator_controls_s::INDEX_YAW]);
-			// PX4_INFO("actuator[%i] output3: %f", i, (double)_controls[i].control[actuator_controls_s::INDEX_THROTTLE]);
 
 			/* During ESC calibration, we overwrite the throttle value. */
 			if (i == 0 && _armed.in_esc_calibration_mode) {
@@ -370,16 +365,6 @@ bool MixingOutput::update()
 	/* do mixing */
 	float outputs[MAX_ACTUATORS] {};
 	const unsigned mixed_num_outputs = _mixers->mix(outputs, _max_num_outputs);
-	// PX4_INFO("Mix output0: %f", (double)outputs[0]);
-	// PX4_INFO("Mix output1: %f", (double)outputs[1]);
-	// PX4_INFO("Mix output2: %f", (double)outputs[2]);
-	// PX4_INFO("Mix output3: %f", (double)outputs[3]);
-	// PX4_INFO("Mix output4: %f", (double)outputs[4]);
-	// PX4_INFO("Mix output5: %f", (double)outputs[5]);
-	// PX4_INFO("Mix output6: %f", (double)outputs[6]);
-	// PX4_INFO("Mix output7: %f", (double)outputs[7]);
-
-
 
 	/* the output limit call takes care of out of band errors, NaN and constrains */
 	output_limit_calc(_throttle_armed, armNoThrottle(), mixed_num_outputs, _reverse_output_mask,

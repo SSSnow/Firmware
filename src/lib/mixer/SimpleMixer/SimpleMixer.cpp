@@ -164,8 +164,6 @@ SimpleMixer::from_text(Mixer::ControlCallback control_cb, uintptr_t cb_handle, c
 		debug("simple parse failed on '%s'", buf);
 		goto out;
 	}
-	printf(buf);
-	printf("simpleMixer text inputs:%i\n",inputs);
 
 	/* at least 1 input is required */
 	if (inputs == 0) {

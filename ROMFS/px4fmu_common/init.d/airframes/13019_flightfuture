@@ -24,10 +24,10 @@ sh /etc/init.d/rc.vtol_defaults
 
 if [ $AUTOCNF = yes ]
 then
-	#airspeed enable
-	param set CBRK_AIRSPD_CHK 0
-	#fixwing airspeed calibration enable
-	param set FW_ARSP_MODE 0
+	#airspeed enable 0
+	param set CBRK_AIRSPD_CHK 162128
+	#fixwing airspeed calibration enable 0
+	param set FW_ARSP_MODE 1
 
 	param set FW_L1_PERIOD 17
 	param set FW_MAN_R_MAX 50
@@ -70,6 +70,7 @@ then
 	param set VT_F_TR_OL_TM   4
 	param set VT_FW_DIFTHR_EN 1
 	param set VT_FW_DIFTHR_SC 0.17
+	param set VT_MOT_ID 12345678
 	param set VT_FW_MOT_OFFID 1234
 	param set VT_FW_PERM_STAB 0
 	param set VT_IDLE_PWM_MC 1200
@@ -93,4 +94,4 @@ set MIXER flightfuture
 set MIXER_AUX flightfuture
 
 set PWM_OUT 12345678
-set PWM_AUX_OUT 12345678
+set PWM_AUX_OUT 123456

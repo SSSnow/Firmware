@@ -420,7 +420,6 @@ user_start(int argc, char *argv[])
 
 		/* track the rate at which the loop is running */
 		perf_count(loop_perf);
-
 		/* kick the mixer */
 		perf_begin(mixer_perf);
 		mixer_tick();

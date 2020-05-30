@@ -289,8 +289,8 @@ MulticopterRateControl::Run()
 			// actuators.control[actuator_controls_s::INDEX_PITCH] = PX4_ISFINITE(att_control(1)) ? att_control(1) : 0.0f;
 			// actuators.control[actuator_controls_s::INDEX_YAW] = PX4_ISFINITE(att_control(2)) ? att_control(2) : 0.0f;
 			// actuators.control[actuator_controls_s::INDEX_THROTTLE] = PX4_ISFINITE(_thrust_sp) ? _thrust_sp : 0.0f;
-			actuators.control[actuator_controls_s::INDEX_ROLL] = 0.3;
-			actuators.control[actuator_controls_s::INDEX_PITCH] = 0.2;
+			actuators.control[actuator_controls_s::INDEX_ROLL] = 0;
+			actuators.control[actuator_controls_s::INDEX_PITCH] = 0;
 			actuators.control[actuator_controls_s::INDEX_YAW] = 0.1;
 			actuators.control[actuator_controls_s::INDEX_THROTTLE] = 0.3;
 			actuators.control[actuator_controls_s::INDEX_LANDING_GEAR] = (float)_landing_gear.landing_gear;
